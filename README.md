@@ -27,7 +27,8 @@ Conformément aux consignes du projet, l'explication détaillée de l'architectu
 
 ## Problèmes connus
 
-Lors de certains scans, l'appli va rester bloquée dans une boucle, il faut quitter et relancer l'application, vous trouverez vos livres scannés à l'accueuil
+Sur certains appareils, lors du scans, l'appli va rester bloquée dans une boucle, il faut quitter et relancer l'application, vous trouverez vos livres scannés à l'accueuil.
+Ce bug apparait sur un de nos telephones de test.
 
 ## Auteurs
 
