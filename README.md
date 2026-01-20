@@ -25,6 +25,10 @@ Conformément aux consignes du projet, l'explication détaillée de l'architectu
 3. Lancer l'installation, accepter l'installation de source inconnues si nécessaire
 4. Lancer l'appli une fois installée
 
+## Problèmes connus
+
+Lors de certains scans, l'appli va rester bloquée dans une boucle, il faut quitter et relancer l'application, vous trouverez vos livres scannés à l'accueuil
+
 ## Auteurs
 
 * Bastien DUFOUR
