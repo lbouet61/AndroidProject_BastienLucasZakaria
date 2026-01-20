@@ -10,6 +10,15 @@ import fr.enssat.sharemybook.BastienLucasZakaria.network.RetrofitInstance
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
+/**
+ * ViewModel for managing book-related data.
+ *
+ * This ViewModel is responsible for interacting with the book data layer, which includes
+ * a local Room database and a remote API (OpenLibrary). It provides methods to load, add,
+ * and fetch book information, and exposes a list of books to the UI.
+ *
+ * @param application The application context, required by AndroidViewModel.
+ */
 class BookViewModel(application: Application) : AndroidViewModel(application) {
     private val db = AppDatabase.getDatabase(application)
     // Liste observable pour l'UI

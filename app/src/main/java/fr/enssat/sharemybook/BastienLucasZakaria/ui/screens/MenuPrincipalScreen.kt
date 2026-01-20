@@ -14,7 +14,22 @@ import androidx.compose.ui.unit.dp
 import fr.enssat.sharemybook.BastienLucasZakaria.data.Book
 import fr.enssat.sharemybook.BastienLucasZakaria.viewmodel.BookViewModel
 
-// --- MENU PRINCIPAL ---
+/**
+ * A Composable screen that serves as the main menu of the application.
+ * It displays a list of the user's books and a Floating Action Button to add new ones.
+ *
+ * This screen features:
+ * - A list of books from the [BookViewModel]. Each book is displayed in a [Card]
+ *   and is clickable to navigate to the book's detail screen.
+ * - A [FloatingActionButton] which, when clicked, opens an [AlertDialog].
+ * - The [AlertDialog] offers two options for adding a book: "Scanner (Caméra)" or "Manuel".
+ *   These options trigger the corresponding navigation callbacks.
+ *
+ * @param viewModel The [BookViewModel] instance containing the list of books and business logic.
+ * @param onNavigateToManualEntry A callback function to navigate to the screen for manual book entry.
+ * @param onNavigateToScan A callback function to navigate to the camera scanning screen.
+ * @param onNavigateToInfo A callback function to navigate to the detail screen of a specific book, passing the book's ISBN.
+ */// --- MENU PRINCIPAL ---
 @Composable
 fun MenuPrincipalScreen(
     viewModel: BookViewModel,
@@ -72,7 +87,17 @@ fun MenuPrincipalScreen(
     }
 }
 
-// --- FORMULAIRE MANUEL ---
+/**
+ * A Composable screen that provides a form for manually adding a new book.
+ * It includes text fields for the book's title, author, and ISBN.
+ * A button allows the user to submit the new book, which is then added
+ * to the `BookViewModel`.
+ *
+ * @param viewModel The view model `BookViewModel` that holds the application's data and business logic,
+ *                  used here to add the new book.
+ * @param onBookAdded A lambda function to be invoked when a book has been successfully added,
+ *                    typically used for navigation (e.g., returning to the main list).
+ */// FORMULAIRE MANUEL
 @Composable
 fun BookEntryScreen(
     viewModel: BookViewModel,
@@ -103,7 +128,14 @@ fun BookEntryScreen(
     }
 }
 
-// --- INFO LIVRE ---
+/**
+ * A Composable function that displays the detailed information of a specific book.
+ * It retrieves the book's data from the ViewModel using its ISBN.
+ *
+ * @param isbn The ISBN of the book to display. This is used to find the book in the ViewModel.
+ * @param viewModel The ViewModel instance containing the list of books and business logic.
+ * @param onBack A lambda function to be invoked when the user wants to navigate back to the previous screen.
+ */// --- INFO LIVRE ---
 @Composable
 fun InfoLivreScreen(
     isbn: String,

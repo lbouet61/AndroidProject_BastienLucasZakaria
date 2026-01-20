@@ -13,6 +13,17 @@ import androidx.navigation.navArgument
 import fr.enssat.sharemybook.BastienLucasZakaria.ui.screens.*
 import fr.enssat.sharemybook.BastienLucasZakaria.viewmodel.BookViewModel
 
+/**
+ * The activity is responsible for:
+ * - Setting up the Compose content view.
+ * - Initializing the `NavController` for navigation.
+ * - Creating and providing the `BookViewModel` to the composable screens.
+ * - Defining the navigation graph, which includes routes for:
+ *   - The main menu (`MenuPrincipalScreen`).
+ *   - The book entry form (`BookEntryScreen`).
+ *   - The barcode scanning screen (`AnalyseScreen`).
+ *   - The book details screen (`InfoLivreScreen`).
+ */
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

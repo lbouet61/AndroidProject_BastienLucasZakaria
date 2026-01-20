@@ -6,6 +6,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
+/**
+ * Retrofit service interface for interacting with the Open Library Books API.
+ * This interface defines the endpoints for fetching book information.
+ */
 // On récupère un JsonElement brut car la clé change dynamiquement (ex: "ISBN:978...")
 interface OpenLibraryService {
     @GET("api/books")
@@ -16,6 +20,10 @@ interface OpenLibraryService {
     ): JsonElement
 }
 
+/**
+ * Singleton object for creating and configuring the Retrofit instance.
+ * It provides a lazy-initialized `api` property to access the OpenLibraryService.
+ */
 object RetrofitInstance {
     val api: OpenLibraryService by lazy {
         Retrofit.Builder()
